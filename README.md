@@ -4,7 +4,7 @@
 #### Installation
 Clone the application using:
 ```
-git clone git@github.com:victorsteven/gallery-app.git
+git clone git@github.com:victorsteven/gallery-shopify.git
 ```
 
 
@@ -25,28 +25,15 @@ go run main.go
 ```
 The server will start running on port 7070(the default port from the .env file)
 
-### The Client(VueJS)
-In a different terminal window, change  to the ``client`` directory
-````.env
-cd client
-````
-- Installation:
-```
-npm install
-```
-- Start the client using:
-```.env
-npm run serve
-```
-- The client will start running on port 8080
+### Testing Endpoints.
 
-### Content Display
+#### Login with any of the seeded user email and password and copy the token provided
+#### Use this token as `Bearer Token`
 
-Visit the browser with the address:
-```.env
-localhost:8080
-```
-![image here](https://res.cloudinary.com/chikodi/image/upload/v1601689035/Screenshot_2020-10-03_at_02.36.09.png)
+#### Delete one image using:
+```DELETE http://localhost:7070/images/1```
 
-### Customization
-- If you wish to change the port the server listens to, you will need to change that in the ``.env`` file in the server directory and also in the ``src/.env.js`` file in the client directory.
+
+#### Delete bulk images using:
+```DELETE http://localhost:7070/bulk_delete/images```
+
